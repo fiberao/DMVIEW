@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<style type="text/css">
+	body { margin: 0; overflow: hidden; }
+	#mygraph {
+	  position: absolute;
+	  width: 100%;
+	  height: 100%;
+	}
+	#control{
+		position: absolute;
+		z-index: 1;
+	}
+</style>
+  <title>DMVIEW</title>
+  	<script src="http://cdn.peerjs.com/0.3/peer.min.js"></script>
+	<script src="static/jszip.min.js"></script>
+	<script src="static/jszip-utils.min.js"></script>
+<!--[if IE]>
+	<script src="static/jszip-utils-ie.min.js"></script>
+<![endif]-->
+  <script type="text/javascript" src="static/vis.js"></script>
+    <script type="text/javascript" src="static/reconnecting-websocket.min.js"></script>
+</head>
+
+<body onresize="graph.redraw();" >
+<div id="mygraph"></div>
+<div id="control">Actuator/Membrane View</div>
+<script type="text/javascript" src="static/index.js"></script>
+</body>
+</html>

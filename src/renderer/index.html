@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset='utf-8'>
+      <meta http-equiv="X-UA-Compatible" content="chrome=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <link rel="shortcut icon" href="favicon.ico" />
+      <link rel="stylesheet" href="static/bootstrap.min.css">
+      <title>DMVIEW</title>
+       <script>
+        if (typeof module === 'object') {
+            window.module = module;
+            module = undefined;
+        }
+    </script>
+    <script src='static/jquery.min.js'></script>
+    <script src="static/bootstrap.min.js"></script>
+   
+    <script>
+        if (window.module) module = window.module;
+    </script>
+   </head>
+   <body >
+      <div class="modal fade" id="remoteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" >
+         <div class="modal-dialog" role="document">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Connect</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                  </button>
+               </div>
+               <div class="modal-body" id="remoteLOG">
+                  <input id="ws" class="form-control " type="url" value="ws://localhost:8888" required>
+                  <div class="invalid-feedback">
+                     Connection to ETA backend is lost.
+                  </div>
+                  
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-info" data-dismiss="modal" id="connect">Connect</button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script type="text/javascript">
+         $("#remoteModal").modal({backdrop: 'static', keyboard: false});
+         $("#connect").click(function(d){
+                  document.location = "dmview.html?server="+ $("#ws").val();
+         });
+      </script>
+   </body>
+</html>
