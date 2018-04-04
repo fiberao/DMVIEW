@@ -12,7 +12,7 @@
   "main": "src/main/index.js",
   "build": {
     "appId": "io.github.fiberao.dmview",
-    "productName": "ETA",
+    "productName": "DMVIEW",
     "copyright": "Copyright (C) 2018 Zuzeng Lin",
     "mac": {
       "category": "public.app-category.education",

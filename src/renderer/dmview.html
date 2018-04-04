@@ -16,6 +16,12 @@
 	}
 </style>
   <title>DMVIEW</title>
+    <script>
+        if (typeof module === 'object') {
+            window.module = module;
+            module = undefined;
+        }
+    </script>
   	<script src="http://cdn.peerjs.com/0.3/peer.min.js"></script>
 	<script src="static/jszip.min.js"></script>
 	<script src="static/jszip-utils.min.js"></script>
@@ -24,11 +30,14 @@
 <![endif]-->
   <script type="text/javascript" src="static/vis.js"></script>
     <script type="text/javascript" src="static/reconnecting-websocket.min.js"></script>
+        <script>
+        if (window.module) module = window.module;
+    </script>
 </head>
 
 <body onresize="graph.redraw();" >
 <div id="mygraph"></div>
 <div id="control">Actuator/Membrane View</div>
-<script type="text/javascript" src="static/index.js"></script>
+<script type="text/javascript" src="static/DMVIEW.js"></script>
 </body>
 </html>
