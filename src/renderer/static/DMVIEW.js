@@ -90,7 +90,7 @@
 	    	mirror = "alpao";
 	    	scale=2.0;
 	    	offset=-1.0;
-	    	overall_sacle=80/97;
+	    	overall_sacle=40/97;
 	    }
 	    
 	    var data = new vis.DataSet();
