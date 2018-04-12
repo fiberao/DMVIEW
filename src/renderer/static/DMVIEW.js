@@ -80,17 +80,17 @@
 	    var mirror = null;
 	    var offset=0.0;
 	    var scale=1.0;
-	    var overall_sacle=2000000.0;
+	    var overall_sacle=1.0;
 	    if (input.length < 40) {
 	    	mirror = "oko";
 	    	offset=0.0;
 	    	scale=1.0;
-	    	overall_sacle=2000000.0;
+	    	overall_sacle=1200000.0;
 	    } else {
 	    	mirror = "alpao";
 	    	scale=2.0;
 	    	offset=-1.0;
-	    	overall_sacle=40/97;
+	    	overall_sacle=80/97;
 	    }
 	    
 	    var data = new vis.DataSet();
