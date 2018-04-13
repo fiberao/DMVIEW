@@ -86,6 +86,7 @@
 	    	offset=0.0;
 	    	scale=1.0;
 	    	overall_sacle=1.0e7;
+
 	    } else {
 	    	mirror = "alpao";
 	    	scale=2.0;
