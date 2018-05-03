@@ -3,7 +3,7 @@
   "license": "MIT",
   "author": "Zuzeng Lin <zuzeng@kth.se>",
   "homepage": "http://fiberao.github.io",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "scripts": {
     "dev": "electron .",
     "dist": "electron-builder",

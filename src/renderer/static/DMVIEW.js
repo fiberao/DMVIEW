@@ -80,20 +80,24 @@
 	    var mirror = null;
 	    var offset=0.0;
 	    var scale=1.0;
-	    var overall_sacle=1.0;
-	    if (input.length < 40) {
-	    	mirror = "oko";
-	    	offset=0.0;
-	    	scale=1.0;
-	    	overall_sacle=1.0e7;
-
-	    } else {
-	    	mirror = "alpao";
-	    	scale=2.0;
-	    	offset=-1.0;
-	    	overall_sacle=8/97;
+	    var resp_sacle=1.0;
+	    var resp_offset=0.0;
+	    if (input.length == 37) {
+		    mirror = "oko";
+		    resp_sacle=0.20e7;
+		}else {
+			scale=2.0;
+			offset=-1.0;
+	    	if (input.length == 43) {
+		    	mirror = "thorlabs";
+		    	resp_sacle=15;
+		    	resp_offset=25.0;
+	    	}else{
+		    	mirror = "alpao";
+		    	resp_sacle=8/97;
+		    }
 	    }
-	    
+	   
 	    var data = new vis.DataSet();
 	    var t = responses[mirror+".json"];
 	    if (t){
@@ -101,10 +105,10 @@
 		    for (var z = 0; z < nelem; z++) {
 	            var A=0;
 	            for (var act = 0; act < input.length; act++) {
-		            A += t.resp[act][z]*(input[act]*scale+offset);
+		            A += ((t.resp[act][z]+resp_offset)*resp_sacle)*(input[act]*scale+offset);
 		        }
 
-	            data.add({x:t.wfx[z],y: t.wfy[z],z:A*overall_sacle})
+	            data.add({x:t.wfx[z],y: t.wfy[z],z:A})
 	        }
 	        graph.setData(data);
 

@@ -1,2 +1,2 @@
 #python -m brython --modules
-python -m http.server 8082
+yarn dev
