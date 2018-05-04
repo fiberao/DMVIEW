@@ -84,7 +84,7 @@
 	    var resp_offset=0.0;
 	    if (input.length == 37) {
 		    mirror = "oko";
-		    resp_sacle=0.5e6;
+		    resp_sacle=5e6;
 		}else {
 			scale=2.0;
 			offset=-1.0;
