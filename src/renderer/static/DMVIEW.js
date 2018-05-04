@@ -84,13 +84,13 @@
 	    var resp_offset=0.0;
 	    if (input.length == 37) {
 		    mirror = "oko";
-		    resp_sacle=0.20e7;
+		    resp_sacle=0.5e6;
 		}else {
 			scale=2.0;
 			offset=-1.0;
 	    	if (input.length == 43) {
 		    	mirror = "thorlabs";
-		    	resp_sacle=15;
+		    	resp_sacle=20;
 		    	resp_offset=25.0;
 	    	}else{
 		    	mirror = "alpao";
