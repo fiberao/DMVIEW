@@ -97,7 +97,7 @@
 		    	resp_sacle=8/97;
 		    }
 	    }
-	   
+	    resp_sacle*=parseFloat(document.getElementById("slider1").value);
 	    var data = new vis.DataSet();
 	    var t = responses[mirror+".json"];
 	    if (t){
